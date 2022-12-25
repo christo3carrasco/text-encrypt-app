@@ -1,0 +1,41 @@
+#cabeza {
+  text-align: center;
+}
+
+.card {
+  min-height: 33vh;
+}
+
+.input-field textarea:focus + label {
+  color: #a50145 !important;
+}
+
+.input-field textarea:focus {
+  border-bottom: 1px solid #a50145 !important;
+  box-shadow: 0 1px 0 0 #a50145 !important;
+}
+
+.btn-p {
+  background: #a50145;
+}
+
+.btn-p:hover {
+  background: #d90429;
+}
+
+.btn-s {
+  background: #8d99ae;
+  color: #000;
+}
+
+.btn-s:hover {
+  background: #ccc;
+}
+
+#clave {
+  text-align: center;
+}
+
+#pie {
+  text-align: center;
+}
