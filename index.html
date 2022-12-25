@@ -9,7 +9,7 @@
     <meta name="author" content="Christopher Carrasco" />
     <meta name="copyright" content="Carrasco" />
     <title>ENCRYPT APP</title>
-    <link rel="stylesheet" href="./css/materialize.css" />
+    <link rel="stylesheet" href="./css/materialize.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="shortcut icon"
@@ -21,11 +21,10 @@
     <header id="cabeza">
       <div class="container">
         <div class="row">
-          <div class="col m12">
+          <div class="col s12 m12">
             <img
               src="https://res.cloudinary.com/christo3carrasco/image/upload/v1655614269/CARRASCO_LOGO_cj03ca.png"
               alt="Logo Carrasco"
-              width="100px"
             />
             <h3>ENCRYPT APP</h3>
           </div>
@@ -35,7 +34,7 @@
     <main>
       <div class="container">
         <div class="row">
-          <form class="col m6">
+          <form class="col s12 m6">
             <div class="card">
               <div class="card-content row">
                 <div class="input-field col s12">
@@ -51,21 +50,27 @@
                     >Solo letras minúsculas y sin acentos.
                   </span>
                 </div>
-                <div class="col s12">
-                  <a class="waves-effect waves-light btn-large btn-p">
-                    Button
+                <div class="col s12 btn-d">
+                  <a
+                    id="encriptar"
+                    class="waves-effect waves-light btn-large btn-p"
+                  >
+                    Encriptar
                   </a>
-                  <a class="waves-effect waves-light btn-large btn-s">
-                    Button
+                  <a
+                    id="desencriptar"
+                    class="waves-effect waves-light btn-large btn-s"
+                  >
+                    Desencriptar
                   </a>
                 </div>
               </div>
             </div>
           </form>
-          <div class="col m6">
+          <div class="col s12 m6">
             <div class="card">
               <div class="card-content row">
-                <div id="clave" class="col m12">
+                <div id="clave" class="col s12">
                   <h5>Ningún mensaje fue encontrado</h5>
                   <p>Ingresa un mensaje para encriptar o desencriptar.</p>
                 </div>
@@ -78,8 +83,8 @@
     <footer id="pie">
       <div class="container">
         <div class="row">
-          <div class="col m12">
-            <h6>copyright</h6>
+          <div class="col s12 m12">
+            <h6>&copy; Copyright 2022 CARRASCO</h6>
           </div>
         </div>
       </div>
