@@ -30,9 +30,15 @@ const encrypt = () => {
 
   document.getElementById(
     "clave"
-  ).innerHTML = `<p>${msg}</p><div class="col s12 btn-d"><a id="copiar" class="waves-effect waves-light btn-large btn-s">Copiar</a></div>`;
+  ).innerHTML = `<p>${msg}</p><div class="col s12 btn-d"><a id="copiar" class="waves-effect waves-light btn-large btn-s" onclick="copypaste()">Copiar</a></div>`;
 
   input.value = "";
+};
+
+const copypaste = () => {
+  let txt = document.querySelector("#clave");
+  let msg = txt.getElementsByTagName("p")[0].innerHTML;
+  navigator.clipboard.writeText(msg);
 };
 
 btnEncrypt.onclick = encrypt;
