@@ -19,6 +19,7 @@ h3 {
 .card {
   display: table;
   min-height: 50vh;
+  width: 100%;
 }
 
 .card-content {
