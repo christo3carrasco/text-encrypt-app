@@ -18,6 +18,16 @@ const notEmpty = () => {
   ).innerHTML = `<h5>Ningún mensaje fue encontrado</h5><p>Ingresa un mensaje para encriptar o desencriptar.</p>`;
 };
 
+const isValid = (txt) => {
+  if (/\b[a-z]+/.test(txt)) {
+    return true;
+  } else {
+    M.toast({ html: "Texto inválido.", classes: "rounded" });
+    input.value = "";
+    return false;
+  }
+};
+
 const setMsg = (msg) => {
   document.getElementById(
     "clave"
@@ -26,7 +36,7 @@ const setMsg = (msg) => {
 };
 
 const encrypt = () => {
-  if (input.value == "") {
+  if (input.value == "" || !isValid(input.value)) {
     notEmpty();
     return;
   }
@@ -46,10 +56,11 @@ const copypaste = () => {
   let txt = document.querySelector("#clave");
   let msg = txt.getElementsByTagName("p")[0].innerHTML;
   navigator.clipboard.writeText(msg);
+  M.toast({ html: "Mensaje copiado.", classes: "rounded" });
 };
 
 const dencrypt = () => {
-  if (input.value == "") {
+  if (input.value == "" || !isValid(input.value)) {
     notEmpty();
     return;
   }
