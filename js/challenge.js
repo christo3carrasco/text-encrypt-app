@@ -1,5 +1,3 @@
-const arrow = () => {};
-
 const CLAVES = {
   a: "ai",
   e: "enter",
@@ -32,6 +30,7 @@ const setMsg = (msg) => {
   document.getElementById(
     "clave"
   ).innerHTML = `<p>${msg}</p><div class="col s12 btn-d"><a id="copiar" class="waves-effect waves-light btn-large btn-s" onclick="copypaste()">Copiar</a></div>`;
+  M.toast({ html: "Mensaje encriptado / desencriptado.", classes: "rounded" });
   input.value = "";
 };
 
